@@ -1,16 +1,47 @@
+<script setup></script>
+
 <template>
-	<div class="mt-20 flex items-center justify-center gap-20">
-		<div class="flex w-full flex-col gap-10">
-			<h3 class="text-3xl">Привет!</h3>
-			<h1 class="text-6xl">Я Сергей</h1>
-			<p>
+	<div class="home">
+		<div class="home__text">
+			<h3 class="home__text hello">Привет!</h3>
+			<h1 class="home__text name">Я Сергей</h1>
+			<p class="home__text description">
 				Занимаюсь мобильной разработкой, фронтендом.<br />Вам нужно
 				мобильное приложение или, может быть, сайт под ключ?<br />
 				Тогда свяжитесь со мной
 			</p>
 		</div>
-		<img class="mt-6 w-2/5" src="/img/home/comp-home.svg" alt="" />
+		<img class="home__img" src="/img/home/comp-home.svg" alt="" />
 	</div>
 </template>
 
-<script setup></script>
+<style>
+.home {
+	margin-top: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 40px;
+}
+
+.home__text {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	width: auto;
+	&.hello {
+		font-size: 38px;
+		overflow: hidden;
+	}
+	&.name {
+		font-size: 46px;
+	}
+	&.description {
+		font-size: 20px;
+		line-height: 40px;
+	}
+}
+.home__img {
+	width: 40%;
+}
+</style>

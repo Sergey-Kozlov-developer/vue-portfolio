@@ -8,34 +8,47 @@ const links = [
 </script>
 
 <template>
-	<div class="mt-2 flex items-center justify-between">
+	<div class="wrapper">
 		<router-link to="/">
-			<div class="flex items-center justify-between gap-3">
+			<div class="logo">
 				<img src="/img/logo/logo.png" alt="logo" />
-				<h1 class="text-primary text-2xl font-bold">DVLPR</h1>
+				<h1 class="logo text">DVLPR</h1>
 			</div>
 		</router-link>
 
 		<nav>
-			<ul class="flex gap-20">
+			<ul class="nav">
 				<li v-for="link in links" :key="link.name">
-					<router-link
-						:to="link.path"
-						class="transition duration-300 hover:text-yellow-400"
-					>
+					<router-link :to="link.path">
 						{{ link.name }}
 					</router-link>
 				</li>
-				<!-- <li>
-					<router-link to="/about">Обо мне</router-link>
-				</li>
-				<li>
-					<router-link to="/skills">Навыки</router-link>
-				</li>
-				<li>
-					<router-link to="/portfolio">Портфолио</router-link>
-				</li> -->
 			</ul>
 		</nav>
 	</div>
 </template>
+<style>
+.wrapper {
+	margin-top: 2px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+	&.text {
+		font-size: 36px;
+		font-weight: 700;
+	}
+}
+
+.nav {
+	display: flex;
+	gap: 40px;
+	font-weight: 700;
+}
+</style>
