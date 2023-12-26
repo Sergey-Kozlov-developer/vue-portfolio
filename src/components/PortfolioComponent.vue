@@ -8,6 +8,9 @@ defineProps({
 	stack: String,
 	stackList: String,
 	category: Number,
+	appleImg: String,
+	gitHubImg: String,
+	googleImg: String,
 });
 </script>
 
@@ -24,6 +27,14 @@ defineProps({
 				<p class="card__description stack">{{ stack }}</p>
 				<p class="card__description stackList">{{ stackList }}</p>
 			</div>
+			<!-- <div v-if="id === 1 && id === 2">
+				<img :src="appleImg" alt="Apple" />
+				<img :src="gitHubImg" alt="GitHub" />
+				<img :src="googleImg" alt="Google" />
+			</div>
+			<div v-else>
+				<img :src="gitHubImg" alt="" />
+			</div> -->
 		</div>
 	</div>
 </template>
@@ -44,14 +55,21 @@ defineProps({
 
 	background-color: #0e2a47;
 	border: 1px solid #138dc5;
+	border-radius: 20px;
 	cursor: pointer;
 	box-shadow: 5px 5px 5px #138dc5;
 	transition: scale 0.3s ease-in;
+
+	img {
+		border-radius: 20px 20px 0 0;
+		height: 50%;
+	}
 
 	&:hover {
 		scale: 1.1;
 	}
 }
+
 .card__title {
 	text-align: center;
 	span {
