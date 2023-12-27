@@ -1,7 +1,7 @@
 <template>
-	<SkillsComponent />
+	<Skills />
 </template>
 
 <script setup>
-import SkillsComponent from "@/components/SkillsComponent.vue";
+import Skills from "@/components/Skills.vue";
 </script>

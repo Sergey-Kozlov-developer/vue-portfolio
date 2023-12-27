@@ -1,7 +1,7 @@
 <template>
-	<NavigationComponent />
+	<Navigation />
 </template>
 
 <script setup>
-import NavigationComponent from "@/components/NavigationComponent.vue";
+import Navigation from "@/components/Navigation.vue";
 </script>

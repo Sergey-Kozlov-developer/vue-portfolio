@@ -17,7 +17,7 @@
 
 <style>
 .home {
-	margin-top: 40px;
+	padding-top: 100px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;

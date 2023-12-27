@@ -2,7 +2,7 @@
 import { ref, onMounted } from "vue";
 import axios from "axios";
 
-import PortfolioListComponent from "@/components/PortfolioListComponent.vue";
+import PortfolioList from "@/components/PortfolioList.vue";
 
 const items = ref([]);
 
@@ -23,7 +23,7 @@ onMounted(fetchItems);
 
 <template>
 	<div class="wrapper__portfolio">
-		<PortfolioListComponent :items="items" />
+		<PortfolioList :items="items" />
 	</div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
-	<AboutComponent />
+	<About />
 </template>
 
 <script setup>
-import AboutComponent from "@/components/AboutComponent.vue";
+import About from "@/components/About.vue";
 </script>
