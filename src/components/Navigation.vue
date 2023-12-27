@@ -2,7 +2,6 @@
 const links = [
 	{ name: "Главная", path: "/" },
 	{ name: "Обо мне", path: "/about" },
-	{ name: "Навыки", path: "/skills" },
 	{ name: "Портфолио", path: "/portfolio" },
 ];
 </script>
@@ -29,7 +28,7 @@ const links = [
 </template>
 <style>
 .wrapper {
-	margin-top: 2px;
+	margin-top: 10px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -48,7 +47,7 @@ const links = [
 
 .nav {
 	display: flex;
-	gap: 40px;
+	gap: 100px;
 	font-weight: 700;
 }
 </style>
