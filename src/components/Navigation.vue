@@ -50,4 +50,7 @@ const links = [
 	gap: 100px;
 	font-weight: 700;
 }
+.router-link-active {
+	color: #d3b714;
+}
 </style>

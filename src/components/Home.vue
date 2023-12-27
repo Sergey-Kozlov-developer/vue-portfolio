@@ -31,7 +31,11 @@ const items = ref([
 ]);
 const removeItem = (toRemove) => {
 	items.value = items.value.filter((item) => item !== toRemove);
+	// items.value = items.value.sort();
+
+	// items.value = items.value((item) => item.reverse() !== toRemove);
 };
+// watch(removeItem);
 </script>
 
 <template>
