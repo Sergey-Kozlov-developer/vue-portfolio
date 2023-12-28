@@ -27,6 +27,31 @@ li {
 		color: #d3b714;
 	}
 }
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+
+	// 25% {
+	// 	transform: rotate(0deg);
+
+	// 	// border-radius: 20%;
+	// }
+	// 50% {
+	// 	transform: rotate(360deg);
+
+	// 	// border-radius: 20%;
+	// }
+	// 75% {
+	// 	transform: rotate(360deg);
+
+	// 	// border-radius: 25%;
+	// }
+
+	to {
+		transform: rotate(360deg);
+	}
+}
 /* The typing effect */
 // @keyframes typing {
 // from {

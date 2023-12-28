@@ -29,12 +29,12 @@ const items = ref([
 	tailwind,
 	git,
 ]);
-const removeItem = (toRemove) => {
-	items.value = items.value.filter((item) => item !== toRemove);
-	// items.value = items.value.sort();
 
-	// items.value = items.value((item) => item.reverse() !== toRemove);
-};
+// const removeItem = (toRemove) => {
+// 	items.value = items.value.filter((item) => item !== toRemove);
+// 	console.log(toRemove);
+// };
+
 // watch(removeItem);
 </script>
 
@@ -51,16 +51,11 @@ const removeItem = (toRemove) => {
 			<!-- <button><a href="">GitHub</a></button> -->
 			<p class="home__text description">Мой стек технологий:</p>
 			<ul class="home__skills" v-auto-animate>
-				<li
-					class="home__skills item"
-					v-for="item in items"
-					:key="item"
-					@click="removeItem(item)"
-				>
-					<!-- {{ item }}  -->
+				<li class="home__skills item" v-for="item in items" :key="item">
+					<!-- @click="removeItem(item)" -->
 					<img :src="item" alt="" />
 				</li>
-				<!-- <button class="btn">Нажми меня</button> -->
+				<!-- <button class="btn" @click="refreshItem">Нажми меня</button> -->
 			</ul>
 		</div>
 		<img class="home__img" src="/img/home/comp-home.svg" alt="" />
@@ -114,8 +109,10 @@ const removeItem = (toRemove) => {
 		width: 50px;
 		height: 50px;
 		transition: scale 0.2s ease-in;
+
 		&:hover {
 			scale: 1.2;
+			animation: 3s linear infinite rotate;
 		}
 		img {
 			width: 46px;
